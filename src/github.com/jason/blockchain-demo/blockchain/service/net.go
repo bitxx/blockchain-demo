@@ -7,7 +7,7 @@ import (
 	"time"
 	"github.com/gorilla/mux"
 	"encoding/json"
-	"github.com/jason/blockchain-demo/model"
+	"github.com/jason/blockchain-demo/blockchain/model"
 	"io"
 	"github.com/davecgh/go-spew/spew"
 )
@@ -64,7 +64,7 @@ func handleWriteBlock(w http.ResponseWriter, r *http.Request){
 	if err!=nil{
 		respondWithJSON(w,r,http.StatusInternalServerError,r.Body)
 	}
-	if isBlockValid(newBlock,model.Blockchain[len(model.Blockchain)-1]){
+	if isBlockValid(newBlock, model.Blockchain[len(model.Blockchain)-1]){
 		newBlockchain := append(model.Blockchain,newBlock)
 		spew.Dump(newBlockchain)
 	}

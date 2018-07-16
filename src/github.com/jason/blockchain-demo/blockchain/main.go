@@ -1,12 +1,12 @@
-package main
+package blockchain
 
 import (
 	"github.com/joho/godotenv"
 	"time"
-	"github.com/jason/blockchain-demo/model"
+	"github.com/jason/blockchain-demo/blockchain/model"
 	"github.com/davecgh/go-spew/spew"
 	"log"
-	"github.com/jason/blockchain-demo/service"
+	"github.com/jason/blockchain-demo/blockchain/service"
 )
 
 func main() {

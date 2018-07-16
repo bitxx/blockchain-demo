@@ -1,7 +1,7 @@
 package service
 
 import (
-	"github.com/jason/blockchain-demo/model"
+	"github.com/jason/blockchain-demo/blockchain/model"
 	"time"
 	"crypto/sha256"
 	"encoding/hex"
