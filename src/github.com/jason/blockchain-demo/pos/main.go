@@ -24,7 +24,7 @@ func main() {
 	model.Blockchain = append(model.Blockchain,genesisBlock)
 	httpPort := os.Getenv("PORT")
 
-	server, err := net.Listen("tcp", ":"+httpPort)
+	server, err := net.Listen("tcp", ":"+httpPort)  //tcp形式监听，
 	if err!=nil{
 		log.Fatal(err)
 	}
@@ -46,11 +46,11 @@ func main() {
 	}()
 
 	for{
-		conn, err:= server.Accept()
+		conn, err:= server.Accept() //tcp接收监听
 		if err !=nil{
 			log.Fatal(err)
 		}
-		go service.HandleConn(conn)
+		go service.HandleConn(conn)  //
 	}
 
 }
