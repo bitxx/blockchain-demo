@@ -6,3 +6,4 @@
 - [pow机制实现](/src/github.com/jason/blockchain-demo/pow)
 - [pos机制实现](/src/github.com/jason/blockchain-demo/pos)
 - [dops机制实现](/src/github.com/jason/blockchain-demo/dpos)
+- [非对成密钥算法理论-欧几里得算法](/src/github.com/jason/blockchain-demo/number_theory/euclidean_algorithm)
