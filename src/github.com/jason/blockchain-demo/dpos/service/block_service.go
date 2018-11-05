@@ -1,10 +1,10 @@
 package service
 
 import (
-	"github.com/jason/blockchain-demo/dpos/model"
-	"time"
 	"crypto/sha256"
 	"encoding/hex"
+	"github.com/jason-wj/blockchain-demo/src/github.com/jason/blockchain-demo/dpos/model"
+	"time"
 )
 
 func GenerateBlock(oldBlock model.Block, BPM int, address string) (model.Block, error) {
@@ -39,7 +39,7 @@ func IsBlockValid(newBlock model.Block, oldBlock model.Block) bool {
 	if oldBlock.Hash != newBlock.PrevHash {
 		return false
 	}
-	if calculateBlockHash(newBlock)!=newBlock.Hash{
+	if calculateBlockHash(newBlock) != newBlock.Hash {
 		return false
 	}
 	return true

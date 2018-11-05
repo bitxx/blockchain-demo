@@ -1,22 +1,17 @@
-package blockchain
+package main
 
 import (
-	"github.com/joho/godotenv"
-	"time"
-	"github.com/jason/blockchain-demo/blockchain/model"
 	"github.com/davecgh/go-spew/spew"
+	"github.com/jason-wj/blockchain-demo/src/github.com/jason/blockchain-demo/blockchain/model"
+	"github.com/jason-wj/blockchain-demo/src/github.com/jason/blockchain-demo/blockchain/service"
 	"log"
-	"github.com/jason/blockchain-demo/blockchain/service"
+	"time"
 )
 
 func main() {
-	err := godotenv.Load()
-	if err!=nil{
-		log.Fatal(err)
-	}
 	go func() {
 		t := time.Now()
-		genesisBlock := model.Block{0, t.String(), 0, "", ""}
+		genesisBlock := model.Block{Timestamp: t.String()}
 		genesisBlock.Hash = service.CalculateHash(genesisBlock)
 		spew.Dump(genesisBlock)
 		model.Blockchain = append(model.Blockchain, genesisBlock)
