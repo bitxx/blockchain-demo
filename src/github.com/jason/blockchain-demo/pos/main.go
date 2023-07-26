@@ -1,9 +1,9 @@
 package main
 
 import (
+	"github.com/bitxx/blockchain-demo/src/github.com/jason/blockchain-demo/pos/model"
+	"github.com/bitxx/blockchain-demo/src/github.com/jason/blockchain-demo/pos/service"
 	"github.com/davecgh/go-spew/spew"
-	"github.com/jason-wj/blockchain-demo/src/github.com/jason/blockchain-demo/pos/model"
-	"github.com/jason-wj/blockchain-demo/src/github.com/jason/blockchain-demo/pos/service"
 	"log"
 	"net"
 	"os"

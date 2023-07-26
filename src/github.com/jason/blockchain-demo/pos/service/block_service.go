@@ -3,7 +3,7 @@ package service
 import (
 	"crypto/sha256"
 	"encoding/hex"
-	"github.com/jason-wj/blockchain-demo/src/github.com/jason/blockchain-demo/pos/model"
+	"github.com/bitxx/blockchain-demo/src/github.com/jason/blockchain-demo/pos/model"
 	"time"
 )
 
@@ -19,7 +19,7 @@ func generateBlock(oldBlock model.Block, BPM int, address string) (model.Block, 
 	return newBlock, nil
 }
 
-//将原字符串生成一个hash值
+// 将原字符串生成一个hash值
 func calculateHash(s string) string {
 	h := sha256.New()
 	h.Write([]byte(s))
@@ -27,13 +27,13 @@ func calculateHash(s string) string {
 	return hex.EncodeToString(hashed)
 }
 
-//将一个块生成一个hash值
+// 将一个块生成一个hash值
 func CalculateBlockHash(block model.Block) string {
 	record := string(block.Index) + block.Timestamp + string(block.BPM) + block.PrevHash
 	return calculateHash(record)
 }
 
-//验证区块
+// 验证区块
 func isBlockValid(newBlock, oldBlock model.Block) bool {
 	if oldBlock.Index+1 != newBlock.Index {
 		return false

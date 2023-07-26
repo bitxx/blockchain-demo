@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"encoding/json"
 	"fmt"
-	"github.com/jason-wj/blockchain-demo/src/github.com/jason/blockchain-demo/pos/model"
+	"github.com/bitxx/blockchain-demo/src/github.com/jason/blockchain-demo/pos/model"
 	"io"
 	"log"
 	"math/rand"
@@ -93,8 +93,8 @@ func HandleConn(conn net.Conn) {
 	}
 }
 
-//选择可以生产块的生产者，他们所持有的令牌数量越高，他们就越有可能被选为胜利者。
-//每隔10秒钟选一次
+// 选择可以生产块的生产者，他们所持有的令牌数量越高，他们就越有可能被选为胜利者。
+// 每隔10秒钟选一次
 func PickWinner() {
 	time.Sleep(10 * time.Second)
 	model.Mutex.Lock()

@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/jason-wj/blockchain-demo/src/github.com/jason/blockchain-demo/dpos/model"
-	"github.com/jason-wj/blockchain-demo/src/github.com/jason/blockchain-demo/dpos/service"
+	"github.com/bitxx/blockchain-demo/src/github.com/jason/blockchain-demo/dpos/model"
+	"github.com/bitxx/blockchain-demo/src/github.com/jason/blockchain-demo/dpos/service"
 	"log"
 	"math/rand"
 	"time"

@@ -3,7 +3,7 @@ package service
 import (
 	"crypto/sha256"
 	"encoding/hex"
-	"github.com/jason-wj/blockchain-demo/src/github.com/jason/blockchain-demo/dpos/model"
+	"github.com/bitxx/blockchain-demo/src/github.com/jason/blockchain-demo/dpos/model"
 	"time"
 )
 
